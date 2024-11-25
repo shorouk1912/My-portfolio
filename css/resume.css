@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Resume Layout */
+.resume {
+    margin: 10% 10%;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between;
+    cursor: pointer;
+}
+/* Experience Section */
+.experience {
+    margin-top: 5%;
+    padding: 10px;
+}
+h4 {
+    font-size: 35px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+h6 {
+    color: white;
+    font-size: 20px;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    letter-spacing: 1px;
+}
+p {
+    color: white;
+    line-height: 1.5;
+    margin-top: 15px;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+span {
+    font-size: 18px; /* Adjusted size */
+    margin: 10px 5px;
+}
+
+/* Education Section */
+.education {
+    margin-top: 5%;
+    padding: 10px;
+    margin-left: 5%;
+}
+.education p{
+    margin-bottom: 15px;
+}
+/* Skills Section */
+.skills {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.skil {
+    width: 200px;
+    border: 1px solid gray;
+    border-radius: 20px;
+    background-color: rgba(128, 128, 128, 0.249);
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.skil p {
+    font-weight: bold;
+    font-size: 20px;
+}
+.skil i{
+    font-size: 50px;
+    color: purple;
+}
+.skil p:hover{
+    color: purple;
+}
+
+/* Responsive Media Queries */
+
+/* For Tablets (Min width: 768px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .resume {
+        margin: 5% 5%;
+    }
+    .experience, .Education {
+        margin-left: 0;
+    }
+    h4 {
+        font-size: 35px;
+    }
+    .skills {
+        grid-template-columns: repeat(3, 1fr); /* More columns for larger screens */
+    }
+}
+
+/* For Mobile Phones (Max width: 767px) */
+@media (max-width: 767px) {
+    .resume {
+        margin: 10% 5%;
+    }
+    .experience, .Education {
+        margin-left: 0;
+    }
+    h4 {
+        font-size: 25px; /* Adjusted for better mobile readability */
+    }
+    h6 {
+        font-size: 16px; /* Reduced size for better fitting */
+    }
+    .skills {
+        grid-template-columns: 1fr; /* Single column for mobile */
+    }
+    .skil {
+        flex-direction: column; /* Stack skill items vertically on mobile */
+        padding: 15px;
+        text-align: center;
+    }
+    .skil img {
+        width: 50px;
+        height: 40px;
+        margin-left: 0; /* Remove margin on small screens */
+    }
+}

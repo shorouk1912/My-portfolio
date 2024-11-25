@@ -1,0 +1,260 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:sans-serif;
+    color:purple;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color:black;
+}
+nav{
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    background-color: black;
+    z-index: 1;
+}
+.logo{
+    color:purple;
+    display: flex;
+    font-size: 30px;
+    margin-left: 3%;
+    font-weight: bold;
+    cursor: pointer;
+}
+.logo span{
+    color: white;
+    
+}
+.logo i{
+    font-size: 45px;
+    margin-top:8%;
+    margin-right: 9%;
+}
+ul {
+    display: flex;
+    justify-content:space-evenly;
+}
+ul li{
+    margin-top: 2%;
+    margin-right: 35px;
+    list-style: none;
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 15px;
+}
+li a{
+    text-decoration: none;
+    color: white;
+    border: 1px solid purple;
+    border-radius: 40px;
+    padding: 20px;
+    opacity: .9;
+}
+li a:hover{
+    opacity: 1;
+    border-color: white;
+}
+#menu-icon {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        padding: 20px;
+    }
+
+    nav li {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    #menu-icon {
+        display: block;
+    }
+
+    nav {
+        justify-content: space-between;
+    }
+    nav ul li a {
+        font-size: 20px;
+    }
+}
+/*hero*/
+.hero{
+    color: white;
+    text-transform: capitalize;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10%;
+}
+.hero-content{
+    margin: 5% 10%;
+}
+.hero h4{
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 2px;
+}
+.hero h4 span{
+    margin-right: 10px;
+    font-size: 40px;
+}
+.hero h1{
+    font-size: 100px;
+    letter-spacing: 2px;
+    color: white;
+    display: flex;
+    letter-spacing: 2px;
+}
+.hero h1 span{
+    margin-right: 15px;
+}
+.hero .hero-content p{
+    color: white;
+    padding: 10px;
+    margin: 10px 5px;
+    line-height: 1.7;
+    word-spacing: 6px;
+}
+.hero .information p{
+    border: 1px solid white;
+    margin: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+}
+.information a{
+    color: white;
+    text-decoration: none;
+    font-size:20px;
+}
+.hero .information p:hover{
+    border-color: purple;
+}
+.hero i{
+    color:white;
+    font-size: 20px;
+    margin-right:10px;
+    cursor: pointer;
+}
+.hero img{
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    margin-top: 15%;
+    padding: 20px;
+    z-index: -1;
+}
+@media (max-width: 767px) {
+    .hero {
+        flex-direction:column;
+        align-items: center;
+    }
+
+    .hero h1 {
+        font-size: 50px; 
+    }
+
+    .hero img {
+        width: 300px; 
+        height: 300px; 
+    }
+
+    .hero .information p {
+        font-size: 12px; 
+    }
+
+    .hero .left, .hero .right {
+        text-align: center; 
+    }
+}
+.social{
+    display: flex;
+    justify-content: space-around;
+}
+.social i{
+    border: 1px solid purple;
+    border-radius: 50%;
+    padding: 20px;
+    font-size: 30px;
+    margin: 10px;
+}
+.social i:hover{
+    border-color: white;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .hero {
+        flex-direction: row; /* Tablets: row layout for hero section */
+    }
+    .hero h1 {
+        font-size: 80px;
+    }
+    .hero img {
+        width: 400px;
+        height: 400px;
+    }
+}
+@media (max-width: 767px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo {
+        font-size: 30px;
+    }
+    ul {
+        flex-direction: column;
+        padding: 0;
+    }
+    ul li {
+        margin: 10px 0;
+    }
+    .hero h1 {
+        font-size: 50px;
+    }
+    .hero .information p {
+        font-size: 12px;
+    }
+}
+@media (max-width: 767px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo {
+        font-size: 30px;
+    }
+    ul {
+        flex-direction: column;
+        padding: 0;
+    }
+    ul li {
+        margin: 10px 0;
+    }
+    .hero h1 {
+        font-size: 50px;
+    }
+    .hero .information p {
+        font-size: 12px;
+    }
+}
